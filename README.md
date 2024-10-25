@@ -78,10 +78,10 @@ node index.js
 
 This document provides an overview of the API endpoints available in the Rule Engine API.
 
-1. Create a New Rule
-**Method:** `POST`  
-**Endpoint:** `/create_rule`  
-**Description:** Creates a new rule with the provided rule string.  
+1. Create a New Rule:
+   **Method:** `POST`  
+   **Endpoint:** `/create_rule`  
+   **Description:** Creates a new rule with the provided rule string.  
 
 Request Body
 
@@ -92,10 +92,10 @@ age > 18
 salary > 65000
 ```
 
-2. Combine Multiple Rules
-**Method:** `POST`  
-**Endpoint:** `/combine_rules`  
-**Description:** Combines multiple rules using a logical operator (AND, OR).  
+2. Combine Multiple Rules:
+   **Method:** `POST`  
+   **Endpoint:** `/combine_rules`  
+   **Description:** Combines multiple rules using a logical operator (AND, OR).  
 
 Request Body
 ```plaintext RULEID:
@@ -106,10 +106,10 @@ Request Body
 operator: "AND"
 ```
 
-3. Evaluate Rule
-**Method:** `POST`  
-**Endpoint:** `/evaluate_rule`  
-**Description:** Evaluates a rule against input data.  
+3. Evaluate Rule:
+   **Method:** `POST`  
+   **Endpoint:** `/evaluate_rule`  
+   **Description:** Evaluates a rule against input data.  
 
 Request Body
 ```plaintext RULEID:
@@ -121,10 +121,10 @@ Request Body
   "salary":70000
 }
 ```
-4. Get All Rules
-**Method:** `GET`  
-**Endpoint:** `/rules`  
-**Description:** Retrieves all rules stored in the database.
+4. Get All Rules:
+   **Method:** `GET`  
+   **Endpoint:** `/rules`  
+   **Description:** Retrieves all rules stored in the database.
 
 Click on Button: ""FETCH ALL RULES"
 ---
