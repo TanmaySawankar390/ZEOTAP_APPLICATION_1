@@ -93,9 +93,9 @@ salary > 65000
 ```
 
 2. Combine Multiple Rules:
-   **Method:** `POST`  
-   **Endpoint:** `/combine_rules`  
-   **Description:** Combines multiple rules using a logical operator (AND, OR).  
+- **Method:** `POST`  
+- **Endpoint:** `/combine_rules`  
+- **Description:** Combines multiple rules using a logical operator (AND, OR).  
 
 Request Body
 ```plaintext RULEID:
@@ -107,9 +107,9 @@ operator: "AND"
 ```
 
 3. Evaluate Rule:
-   **Method:** `POST`  
-   **Endpoint:** `/evaluate_rule`  
-   **Description:** Evaluates a rule against input data.  
+- **Method:** `POST`  
+- **Endpoint:** `/evaluate_rule`  
+- **Description:** Evaluates a rule against input data.  
 
 Request Body
 ```plaintext RULEID:
@@ -122,9 +122,9 @@ Request Body
 }
 ```
 4. Get All Rules:
-   **Method:** `GET`  
-   **Endpoint:** `/rules`  
-   **Description:** Retrieves all rules stored in the database.
+- **Method:** `GET`  
+- **Endpoint:** `/rules`  
+- **Description:** Retrieves all rules stored in the database.
 
 Click on Button: ""FETCH ALL RULES"
 ---
