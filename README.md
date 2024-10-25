@@ -9,7 +9,7 @@ This project is a Rule Engine with AST using Node.js, Express, and PostgreSQL fo
 3. [Database Setup](#database-setup)
 4. [Running the Application](#running-the-application)
 5. [API Endpoints](#api-endpoints)
-6. [Additional Notes](#additional)
+6. [Additional Notes](#additional-notes)
 
 ---
 
@@ -113,9 +113,7 @@ operator: "AND"
 
 Request Body
 ```plaintext RULEID:
-{
     1,2
-}
 ```
 ```json
 {
