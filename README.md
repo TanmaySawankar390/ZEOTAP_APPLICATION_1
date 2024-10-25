@@ -1,6 +1,6 @@
-# Rule Engine API
+# 3 Tier Rule Engine With AST 
 
-This project is a Rule Engine API using Node.js, Express, and PostgreSQL for managing and evaluating conditional rules. It includes endpoints for creating, combining, and evaluating rules against input data.
+This project is a Rule Engine with AST using Node.js, Express, and PostgreSQL for managing and evaluating conditional rules. It includes endpoints for creating, combining, and evaluating rules against input data.
 
 ## Table of Contents
 
@@ -132,6 +132,6 @@ Request Body
 **Description:** Retrieves all rules stored in the database.
 Click on Button: ""FETCH ALL RULES"
 ---
-Additional Notes
+### Additional Notes
 - Customize the `PORT` or database configurations in the `.env` file as needed.
 - Review the `ruleEngineController.js` for specific logic on AST creation, rule combination, and evaluation.
