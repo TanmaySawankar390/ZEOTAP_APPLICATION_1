@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rule Engine</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rule Engine Using AST</h1>
+
+      <div class="message" id="message"></div>
+      <div class="rules-container">
+        <div class="column">
+          <h2>Create Rule</h2>
+          <form action="/create_rule" method="POST">
+            <label class="label" for="rule_string">Rule String:</label>
+            <input
+              type="text"
+              id="rule_string"
+              name="rule_string"
+              placeholder="age > 18"
+              required
+            />
+            <button type="submit">Create Rule</button>
+          </form>
+        </div>
+
+        <div class="column">
+          <h2>Combine Rules</h2>
+          <form action="/combine_rules" method="POST">
+            <label class="label" for="rule_ids"
+              >Rule IDs (comma-separated):</label
+            >
+            <input
+              type="text"
+              id="rule_ids"
+              name="rule_ids"
+              placeholder="1,2"
+              required
+            />
+            <label class="label" for="operator">Operator:</label>
+            <select id="operator" name="operator">
+              <option value="AND">AND</option>
+              <option value="OR">OR</option>
+            </select>
+            <button type="submit">Combine Rules</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="rules-container">
+        <div class="column">
+          <h2>Evaluate Rule</h2>
+          <form action="/evaluate_rule" method="POST">
+            <label class="label" for="rule_id">Rule ID:</label>
+            <input
+              type="number"
+              id="rule_id"
+              name="rule_id"
+              placeholder="1"
+              required
+            />
+            <label class="label" for="json_data">User Data (JSON):</label>
+            <textarea
+              id="json_data"
+              name="json_data"
+              placeholder='{"age":25,
+"salary":50000}'
+              required
+            ></textarea>
+            <button type="submit">Evaluate</button>
+          </form>
+        </div>
+
+        <div class="column">
+          <h2>Available Rules</h2>
+          <button id="fetch_rules">Fetch All Rules</button>
+          <div class="rules-list" id="rules_list"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Fetch and display rules
+      document
+        .getElementById("fetch_rules")
+        .addEventListener("click", async () => {
+          const response = await fetch("/rules");
+          if (response.ok) {
+            const rules = await response.json();
+            const rulesList = document.getElementById("rules_list");
+            rulesList.innerHTML =
+              "<ul>" +
+              rules
+                .map(
+                  (rule) =>
+                    `<li>ID: ${rule.id}, Name: ${rule.name}, Rule: ${rule.rule_string}</li>`
+                )
+                .join("") +
+              "</ul>";
+          } else {
+            console.error("Failed to fetch rules");
+            document.getElementById("rules_list").innerText =
+              "Error fetching rules.";
+          }
+        });
+
+      // Check URL parameters and display messages accordingly
+      const urlParams = new URLSearchParams(window.location.search);
+      const messageElement = document.getElementById("message");
+
+      if (urlParams.get("created")) {
+        messageElement.innerHTML = "<span>Rule created successfully!</span>";
+      }
+      if (urlParams.get("combined")) {
+        messageElement.innerHTML = "<span>Rules combined successfully!</span>";
+      }
+      if (urlParams.get("result")) {
+        const result = urlParams.get("result");
+        messageElement.innerHTML = `<span>Evaluation Result: ${result}</span>`;
+      }
+    </script>
+    <div class="message" id="message"><p>&copy; 2024  All rights reserved. | Designed by <a
+        href="https://github.com/TanmaySawankar390">Tanmay
+        Sawankar</a></p></div>
+    
+  </body>
+</html>
