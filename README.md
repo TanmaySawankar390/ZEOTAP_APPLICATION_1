@@ -79,9 +79,9 @@ node index.js
 This document provides an overview of the API endpoints available in the Rule Engine API.
 
 1. Create a New Rule:
-   **Method:** `POST`  
-   **Endpoint:** `/create_rule`  
-   **Description:** Creates a new rule with the provided rule string.  
+- **Method:** `POST`  
+- **Endpoint:** `/create_rule`  
+- **Description:** Creates a new rule with the provided rule string.  
 
 Request Body
 
