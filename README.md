@@ -47,9 +47,9 @@ Ensure the following tools are installed on your system:
    PORT=3000
    
 ### DataBase Setup
-If you are new to PostgreSQL read the documentation(https://www.postgresql.org/)
-Create a New Database:
+If you are new to PostgreSQL read the documentation(https://www.postgresql.org/) for installing Postgres on local system.
 
+Create a New Database:
 1. Open pgAdmin and connect to your PostgreSQL instance.
    Right-click on "Databases" and select "Create" > "Database…"
    Name your database as specified in .env (rule_engine in this example).
@@ -64,12 +64,12 @@ Create a New Database:
     rule_string TEXT NOT NULL,
     ast JSONB NOT NULL
    );
-
+   ```
 ### Running the Application
 
 1. Start the Server:
 ```bash
-npm start
+node index.js
 ```
 2. Testing the Server
    Open your browser or use a tool like Postman to test the server by accessing http://localhost:3000.
