@@ -36,11 +36,12 @@ Ensure the following tools are installed on your system:
    npm install
    npm install express body-parser dotenv pg
    ```
+
+3. **Environment Variables**
+   Create a .env file in the root directory of your project and add the following environment variables:
    ```
    touch .env
    ```
-3. **Environment Variables**
-   Create a .env file in the root directory of your project and add the following environment variables:
    ```bash
    DB_USER=<your-postgresql-username>
    DB_PASSWORD=<your-postgresql-password>
