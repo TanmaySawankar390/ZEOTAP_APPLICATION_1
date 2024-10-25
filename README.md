@@ -35,7 +35,10 @@ Ensure the following tools are installed on your system:
    ```bash
    npm install
    npm install express body-parser dotenv pg
-
+   ```
+   ```
+   touch .env
+   ```
 3. **Environment Variables**
    Create a .env file in the root directory of your project and add the following environment variables:
    ```bash
