@@ -113,7 +113,7 @@ operator: "AND"
 
 Request Body
 ```plaintext RULEID:
-    1,2
+    1
 ```
 ```json
 {
