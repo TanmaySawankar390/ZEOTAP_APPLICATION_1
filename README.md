@@ -72,7 +72,7 @@ Create a New Database:
 node index.js
 ```
 2. Testing the Server
-   Open your browser or use a tool like Postman to test the server by accessing http://localhost:3000.
+   Open your browser or use a tool like Postman to test the server or reach live server at http://localhost:3000.
  
 ### API Endpoints
 
@@ -127,10 +127,10 @@ Request Body
 }
 ```
 4. Get All Rules
-
 **Method:** `GET`  
 **Endpoint:** `/rules`  
 **Description:** Retrieves all rules stored in the database.
+
 Click on Button: ""FETCH ALL RULES"
 ---
 ### Additional Notes
